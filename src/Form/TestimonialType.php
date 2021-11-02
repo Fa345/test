@@ -15,11 +15,12 @@ class TestimonialType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('message', textareatype::class)
             ->add('image', FileType::class, [
                 'mapped' => false,
                 'label'  => 'Please enter your image'
             ])
+            ->add('message', textareatype::class)
+            
             ->add('ajoutertestimonial', SubmitType::class, [
                 'label' => 'Ajouter Testimonial'
             ]);
